@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Worker TSA connects people across the United States with local tradespeople and service providers.">
+<meta name="theme-color" content="#7a0f1d">
+<title>Worker TSA</title>
+<link rel="icon" href="logo.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<div id="bar" hidden><button class="tb" id="abt" type="button" data-i="abT" hidden></button><div class="rt"><button class="tb" id="lang" type="button">EN</button><button class="tb ic" id="gear" type="button" aria-label="Settings" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button></div></div>
+
+<section class="sc dk on" id="s0" role="img" aria-label="Worker TSA"></section>
+
+<section class="sc ctr" id="s1">
+<h2><span>Welcome</span><span>to Worker TSA</span></h2>
+<p class="slg">Your work, our priority!</p>
+<div class="sp" role="status" aria-label="Loading"></div>
+</section>
+
+<section class="sc photo" id="s2"><div class="sheet">
+<div class="brand"><img class="logo" src="logo.jpg" alt=""><span>Worker <b>TSA</b></span></div>
+<div class="tabs"><button type="button" id="tin" class="on" data-i="login"></button><button type="button" id="tup" data-i="signup"></button></div>
+<div class="lockbox" id="lockbox" role="alert" hidden><span data-i="lockT"></span><strong id="lockcd">05:00</strong><span data-i="lockD"></span></div>
+<form id="af" novalidate>
+<label><span data-i="email"></span><input name="em" type="email" autocomplete="email" inputmode="email"></label>
+<label><span data-i="pass"></span><input name="pw" type="password" autocomplete="current-password"></label>
+<label id="cw" hidden><span data-i="pass2"></span><input name="pc" type="password" autocomplete="new-password"></label>
+<p class="err" role="alert"></p>
+<p class="ok" id="am" role="status"></p>
+<button class="btn" id="ab"></button>
+<button class="lnk" type="button" id="fg" data-i="forgot"></button>
+</form>
+</div></section>
+
+<section class="sc photo" id="s3"><div class="sheet">
+<button class="lnk" type="button" data-go="s2" data-i="back"></button>
+<h2 data-i="fpT"></h2>
+<form class="fp on" id="f1" novalidate>
+<p class="mute" data-i="fpD"></p>
+<label><span data-i="email"></span><input name="em" type="email" autocomplete="email" inputmode="email"></label>
+<p class="err" role="alert"></p>
+<button class="btn" data-i="sendCode"></button>
+</form>
+<form class="fp" id="f2" novalidate>
+<p class="mute" data-i="codeD"></p>
+<input class="code" name="cd" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="000000">
+<p class="err" role="alert"></p>
+<button class="btn" data-i="verify"></button>
+</form>
+<form class="fp" id="f3" novalidate>
+<label><span data-i="np"></span><input name="pw" type="password" autocomplete="new-password"></label>
+<label><span data-i="pass2"></span><input name="pc" type="password" autocomplete="new-password"></label>
+<p class="err" role="alert"></p>
+<button class="btn" data-i="save"></button>
+</form>
+<div class="fp" id="f4"><p data-i="doneT"></p><button class="btn" type="button" id="tl" data-i="toLogin"></button></div>
+</div></section>
+
+<section class="sc photo" id="s13"><div class="sheet">
+<h2 data-i="lgT"></h2>
+<p data-i="prD"></p>
+<button class="lnk" type="button" id="rp" data-i="readP"></button>
+<button class="lnk" type="button" id="rck" data-i="readC"></button>
+<label class="chk"><input type="checkbox" id="pk"><span data-i="prA"></span></label>
+<label class="chk"><input type="checkbox" id="pk2"><span data-i="ckA"></span></label>
+<button class="btn" type="button" id="pc2" data-i="cont" disabled></button>
+</div></section>
+
+<section class="sc photo" id="s4"><div class="sheet">
+<h2 data-i="roleT"></h2>
+<p class="mute" data-i="roleD"></p>
+<button class="opt" type="button" data-r="client"><strong data-i="client"></strong><span data-i="clientD"></span></button>
+<button class="opt" type="button" data-r="provider"><strong data-i="prov"></strong><span data-i="provD"></span></button>
+<button class="btn" type="button" id="rc" data-i="confirm" disabled></button>
+</div></section>
+
+<section class="sc photo" id="s5"><div class="sheet">
+<h2 data-i="cityT"></h2>
+<button class="lnk fvl" type="button"></button>
+<input id="cs" type="search" data-p="search" autocomplete="off">
+<ul class="cl" id="cl"></ul>
+</div></section>
+
+<section class="sc photo" id="s6"><div class="sheet">
+<div class="rw"><button class="lnk" type="button" data-go="s18" data-i="back"></button><button class="lnk fvl" type="button"></button></div>
+<h2 id="pt"></h2>
+<p class="err" id="fm" role="alert"></p>
+<div id="pl"></div>
+</div></section>
+
+<section class="sc photo" id="s7"><div class="sheet">
+<h2 data-i="fT"></h2>
+<form id="pf" novalidate>
+<label class="file"><span data-i="photo"></span><input type="file" name="photo" accept="image/*"><b data-i="choose"></b></label>
+<label><span data-i="fn"></span><input name="fn" autocomplete="given-name"></label>
+<label><span data-i="ln"></span><input name="ln" autocomplete="family-name"></label>
+<label><span data-i="dob"></span><input name="dob" type="date"></label>
+<label><span data-i="email"></span><input name="em" type="email" inputmode="email" autocomplete="email"></label>
+<label><span data-i="ph"></span><input name="ph" type="tel" inputmode="tel" placeholder="(555) 555-0100"></label>
+<label><span data-i="wa"></span><input name="wa" type="tel" inputmode="tel" placeholder="(555) 555-0100"></label>
+<label><span data-i="job"></span><select name="job"></select></label>
+<label><span data-i="city"></span><select name="city"></select></label>
+<label><span data-i="st"></span><input name="st" autocomplete="street-address"></label>
+<label><span data-i="desc"></span><textarea name="d" rows="5" maxlength="300"></textarea></label>
+<p class="err" role="alert"></p>
+<button class="btn" data-i="submit"></button>
+</form>
+</div></section>
+
+<section class="sc photo" id="s8"><div class="sheet">
+<h2 data-i="prevT"></h2>
+<p class="mute" data-i="prevD"></p>
+<p id="pst"><strong></strong></p>
+<div id="pv"></div>
+<button class="btn alt" type="button" id="sn2" data-i="payNow"></button>
+</div></section>
+
+<section class="sc photo" id="s9"><div class="sheet">
+<h2 data-i="subT"></h2>
+<button class="opt" type="button" data-pr="12.99" data-pk="perM"><strong>$12.99</strong><span data-i="perM"></span></button>
+<button class="opt pop" type="button" data-pr="29.99" data-pk="per3"><em class="tag" data-i="popular"></em><strong>$29.99</strong><span data-i="per3"></span></button>
+<button class="opt" type="button" data-pr="99.99" data-pk="perY"><strong>$99.99</strong><span data-i="perY"></span></button>
+<p class="mute" id="tnote" data-i="trialNote" hidden></p>
+<p class="ok" id="pcm" role="status"></p>
+<button class="btn" type="button" id="pc" data-i="cont"></button>
+</div></section>
+
+<section class="sc photo" id="s10"><div class="sheet">
+<button class="lnk" type="button" data-go="s9" data-i="back"></button>
+<h2 data-i="payT"></h2>
+<p class="mute" id="ps"></p>
+<button class="opt pay" type="button" data-pm="visa" aria-label="Visa"><img src="pay-visa.jpg" alt="Visa"></button>
+<button class="opt pay" type="button" data-pm="mastercard" aria-label="Mastercard"><img src="pay-mastercard.jpg" alt="Mastercard"></button>
+<button class="opt pay amex" type="button" data-pm="amex" aria-label="American Express"><img src="pay-amex.jpg" alt="American Express"></button>
+<button class="btn" type="button" id="pay" disabled></button>
+</div></section>
+
+<section class="sc photo" id="s11"><div class="sheet">
+<button class="lnk" type="button" id="bk" data-i="back"></button>
+<div class="brand"><img class="logo" src="logo.jpg" alt=""><span>Worker <b>TSA</b></span></div>
+<p class="mute">Your work, our priority!</p>
+<h2 data-i="abT"></h2>
+<p data-i="abD"></p>
+<div class="stk how">
+<h2 class="h3" data-i="howT"></h2>
+<ol><li data-i="how1"></li><li data-i="how2"></li><li data-i="how3"></li></ol>
+<h2 class="h3" data-i="plansT"></h2>
+<p data-i="plansD"></p>
+</div>
+<img class="ab" src="about-phone.jpg" alt="Worker TSA" loading="lazy">
+<button class="btn alt" type="button" data-doc="t" data-i="terms"></button>
+<button class="btn alt" type="button" data-doc="p" data-i="privT"></button>
+<button class="btn alt" type="button" data-doc="c" data-i="cookT"></button>
+<p><span data-i="sup"></span> <a href="mailto:workertsa001@protonmail.com">workertsa001@protonmail.com</a></p>
+<div class="car"><img src="about-1.jpg" alt="" loading="lazy"><img src="about-2.jpg" alt="" loading="lazy"><img src="about-3.jpg" alt="" loading="lazy"><img src="about-4.jpg" alt="" loading="lazy"></div>
+<p class="mute" data-i="copy"></p>
+</div></section>
+
+<section class="sc photo" id="s12"><div class="sheet">
+<button class="lnk" type="button" id="bk2" data-i="back"></button>
+<h2 data-i="seT"></h2>
+<div class="kv"><span data-i="email"></span><strong id="se"></strong></div>
+<div class="kv" id="sp"><span data-i="pass"></span><strong>••••••••</strong></div>
+<div class="stk" id="pset" hidden>
+<div class="kv cdbox"><span data-i="subs"></span><strong id="sn"></strong><span id="cd"></span><span id="cxs"></span></div>
+<p class="mute" data-i="nocx"></p>
+<h2 class="h3" data-i="edT"></h2>
+<p class="mute" data-i="edD"></p>
+<form id="ef" novalidate>
+<label class="file"><span data-i="photo"></span><input type="file" name="photo" accept="image/*"><b data-i="choose"></b></label>
+<label><span data-i="ph"></span><input name="ph" type="tel" inputmode="tel"></label>
+<label><span data-i="wa"></span><input name="wa" type="tel" inputmode="tel"></label>
+<p class="mute" id="lk"></p>
+<p class="err" role="alert"></p>
+<p class="ok" role="status"></p>
+<button class="btn" data-i="save"></button>
+</form>
+<div class="kv"><span data-i="roT"></span><strong id="ro"></strong></div>
+</div>
+<p><span data-i="sup"></span> <a href="mailto:workertsa001@protonmail.com">workertsa001@protonmail.com</a></p>
+<button class="btn dng" type="button" id="del1" data-i="delA"></button>
+<div class="cf" id="dc">
+<p data-i="delW"></p>
+<p id="dw2" data-i="delW2" hidden></p>
+<button class="btn dy" type="button" id="del2" data-i="delY"></button>
+<button class="btn alt" type="button" id="del3" data-i="cancel"></button>
+</div>
+</div></section>
+
+<section class="sc photo" id="s14"><div class="sheet">
+<button class="lnk" type="button" id="bk3" data-i="back"></button>
+<h2 id="dT"></h2>
+<div class="doc" id="dB"></div>
+</div></section>
+
+<section class="sc photo" id="s15"><div class="sheet">
+<button class="lnk" type="button" id="bk4" data-i="back"></button>
+<h2 data-i="fvs"></h2>
+<div id="fl"></div>
+</div></section>
+
+<section class="sc photo" id="s16"><div class="sheet">
+<button class="lnk" type="button" id="bk5" data-i="back"></button>
+<h2 data-i="repT"></h2>
+<p class="mute" id="rpn"></p>
+<form id="rf" novalidate>
+<label><span data-i="repR"></span><select name="r"><option value="" data-i="selr"></option><option value="1" data-i="r1"></option><option value="2" data-i="r2"></option><option value="3" data-i="r3"></option><option value="4" data-i="r4"></option><option value="5" data-i="r5"></option></select></label>
+<label><span data-i="repD"></span><textarea name="x" rows="4" maxlength="500"></textarea></label>
+<p class="err" role="alert"></p>
+<button class="btn" data-i="send"></button>
+</form>
+<div class="stk" id="rok" hidden><p data-i="repOk"></p><button class="btn" type="button" id="rb" data-i="back"></button></div>
+</div></section>
+
+<section class="sc photo" id="s17"><div class="sheet">
+<button class="lnk" type="button" id="ax" data-i="exit"></button>
+<h2 data-i="admT"></h2>
+<div class="tabs"><button type="button" id="at1" class="on" data-i="dash"></button><button type="button" id="at2" data-i="verT"></button><button type="button" id="at3" data-i="provTab"></button></div>
+<div class="grid" id="ad1">
+<div class="kv"><span data-i="a1"></span><strong class="big" id="a1"></strong></div>
+<div class="kv"><span data-i="a3"></span><strong class="big" id="a3"></strong></div>
+<div class="kv"><span data-i="a4"></span><strong class="big" id="a4"></strong></div>
+<button class="btn dng" type="button" id="rz1" data-i="rzM"></button>
+<button class="btn dng" type="button" id="rz2" data-i="rzY"></button>
+<div class="cf" id="rzc"><p data-i="rzW"></p><button class="btn dy" type="button" id="rz3" data-i="rzC"></button><button class="btn alt" type="button" id="rz4" data-i="cancel"></button></div>
+</div>
+<div id="ad2" hidden><div id="al"></div></div>
+<div id="ad3" hidden><input id="aps" type="search" data-p="search2" autocomplete="off"><div id="apl" class="stk"></div></div>
+</div></section>
+
+<section class="sc photo" id="s18"><div class="sheet">
+<div class="rw"><button class="lnk" type="button" data-go="s5" data-i="back"></button><button class="lnk fvl" type="button"></button></div>
+<h2 data-i="domT"></h2>
+<p class="mute" id="dcy"></p>
+<div class="tiles" id="dgl"></div>
+</div></section>
+<section class="sc photo" id="s21"><div class="sheet">
+<img class="ab" id="introimg" alt="Worker TSA" hidden>
+<div class="stk" id="introtxt">
+<div class="brand"><img class="logo" src="logo.jpg" alt=""><span>Worker <b>TSA</b></span></div>
+<p class="mute">Your work, our priority!</p>
+<p data-i="abD"></p>
+</div>
+<div class="stk how">
+<h2 class="h3" data-i="howT"></h2>
+<ol><li data-i="how1"></li><li data-i="how2"></li><li data-i="how3"></li></ol>
+<h2 class="h3" data-i="plansT"></h2>
+<p data-i="plansD"></p>
+</div>
+<button class="btn" type="button" id="ic" data-i="cont"></button>
+</div></section>
+
+<section class="sc photo" id="s22"><div class="sheet">
+<button class="lnk" type="button" id="bk6" data-i="back"></button>
+<h2 id="pdT"></h2>
+<div class="kv"><span data-i="statusL"></span><strong id="pdS"></strong></div>
+<div class="kv cdbox"><span data-i="subs"></span><strong id="pdSub"></strong><span id="pdCd"></span></div>
+<div class="kv"><span data-i="detL"></span><strong id="pdInfo"></strong></div>
+<div class="docs" id="pdDocs"></div>
+<h2 class="h3" data-i="repsT"></h2>
+<div class="stk" id="pdReps"></div>
+<button class="btn dng" type="button" id="pdDel1" data-i="delP"></button>
+<div class="cf" id="pdDc"><p data-i="delPW"></p><button class="btn dy" type="button" id="pdDel2" data-i="delPY"></button><button class="btn alt" type="button" id="pdDel3" data-i="cancel"></button></div>
+</div></section>
+
+<section class="sc dk" id="s19" role="img" aria-label="Look for the professional you need here"></section>
+
+<section class="sc dk" id="s20" role="img" aria-label="Show to everyone what you do"></section>
+
+<div class="toast" id="toast" role="status" hidden></div>
+</div>
+<noscript>Worker TSA needs JavaScript to run.</noscript>
+<script src="supabase.js"></script>
+<script src="config.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
