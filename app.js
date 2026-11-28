@@ -279,7 +279,7 @@ function resetUI() {
   $$(".file b").forEach(b => { b.dataset.i = "choose"; });
   $$("[data-r],[data-pr],[data-pm]").forEach(b => b.classList.remove("on"));
   $$(".cf").forEach(x => x.classList.remove("on"));
-  $("#rc").disabled = true; pm = null; $("#pay").disabled = true; pickPlan($('[data-pr="29.99"]'));
+  $("#rc").disabled = true; pm = null; $("#pay").classList.remove("ld"); pickPlan($('[data-pr="29.99"]'));
   $("#pk").checked = false; $("#pk2").checked = false; $("#pc2").disabled = true;
   $("#am").textContent = ""; $("#pcm").textContent = "";
   fp("f1"); mode = "in"; tr();
@@ -645,14 +645,24 @@ $("#pc").onclick = () => {
   } else { sum(); show("s10"); }
 };
 $("#sn2").onclick = () => { setPlanMode(); show("s9"); };
-$$("[data-pm]").forEach(b => { b.onclick = () => { pm = b.dataset.pm; $$("[data-pm]").forEach(x => x.classList.toggle("on", x === b)); $("#pay").disabled = false; }; });
+// One single payment button: the card brand (Visa / Mastercard / Amex) is chosen by the customer on the payment page.
+// The button shows a loading state for at least 2 seconds, then the browser is sent to the payment page.
 $("#pay").onclick = () => run($("#pay"), async () => {
-  if (!pm) return;
-  const d = await fn("create-checkout", { plan: PLN[plan.k], locale: L ? "en" : "fr", brand: pm });
-  const u = new URL(d.checkout_url);
-  const hosts = Array.isArray(WTSA.CHECKOUT_HOSTS) && WTSA.CHECKOUT_HOSTS.length ? WTSA.CHECKOUT_HOSTS : ["kprimepay.com"];
-  if (u.protocol !== "https:" || !hosts.some(a => u.hostname === a || u.hostname.endsWith("." + a))) throw new Error("checkout");
-  location.href = u.href;
+  const btn = $("#pay");
+  btn.classList.add("ld"); btn.textContent = t("wait");
+  try {
+    const [d] = await Promise.all([
+      fn("create-checkout", { plan: PLN[plan.k], locale: L ? "en" : "fr", brand: "card" }),
+      new Promise(r => setTimeout(r, 2000)),
+    ]);
+    const u = new URL(d.checkout_url);
+    const hosts = Array.isArray(WTSA.CHECKOUT_HOSTS) && WTSA.CHECKOUT_HOSTS.length ? WTSA.CHECKOUT_HOSTS : ["kprimepay.com"];
+    if (u.protocol !== "https:" || !hosts.some(a => u.hostname === a || u.hostname.endsWith("." + a))) throw new Error("checkout");
+    location.href = u.href;
+    await new Promise(r => setTimeout(r, 10000));   // stay in the loading state while the browser leaves the page
+  } finally {
+    btn.classList.remove("ld"); sum();
+  }
 });
 
 $("#abt").onclick = () => show("s11");

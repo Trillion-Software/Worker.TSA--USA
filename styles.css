@@ -146,3 +146,7 @@ input:disabled{opacity:.6;cursor:not-allowed}
 .lockbox{display:flex;flex-direction:column;gap:var(--s1);align-items:center;text-align:center;padding:var(--s2);border-radius:12px;background:var(--bd);color:#fff;font-weight:600}
 .lockbox strong{font-size:44px;letter-spacing:2px;font-variant-numeric:tabular-nums}
 .lockbox span:last-child{font-size:14px;font-weight:400}
+
+.btn.ld{display:flex;align-items:center;justify-content:center;gap:10px}
+.btn.ld::before{content:"";width:18px;height:18px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:r .8s linear infinite}
+.btn.ld:disabled{background:var(--bd);color:#fff;cursor:wait}

@@ -44,7 +44,7 @@ roT:["Informations non modifiables","Information that cannot be edited"],nochg:[
 saved:["Modifications enregistrées.","Changes saved."],
 expired:["Votre essai gratuit ou votre abonnement a expiré. Connectez-vous pour continuer.","Your free trial or subscription has expired. Log in to continue."],
 cont:["Continuer","Continue"],reqm:["Veuillez remplir les champs signalés en rouge.","Please fill in the fields marked in red."],
-payT:["Moyen de paiement","Payment method"],sel:["Abonnement choisi :","Selected plan:"],pay:["Payer","Pay"],
+payT:["Paiement sécurisé","Secure payment"],sel:["Abonnement choisi :","Selected plan:"],pay:["Payer","Pay"],wait:["Veuillez patienter quelques instants…","Please wait a few moments…"],
 choose:["Choisir un fichier","Choose a file"],submit:["Enregistrer mon profil","Save my profile"],
 req:["Veuillez remplir tous les champs.","Please fill in all fields."],bademail:["Adresse e-mail invalide.","Invalid email address."],
 shortpw:["8 caractères minimum.","8 characters minimum."],nomatch:["Les mots de passe ne correspondent pas.","Passwords do not match."],
